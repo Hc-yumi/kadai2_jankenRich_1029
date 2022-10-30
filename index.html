@@ -16,7 +16,7 @@
 <body>
   <header>色んな荷物を倉庫へ運ぼう！</header>
 
-  <table>
+  <table class="money">
     <tr>
       <th>初期所持金</th>
       <th>¥100,000</th>
@@ -28,43 +28,53 @@
   </table>
 
   <!-- ①選ぶ項目一つ目 -->
-  <div>
+  <div class="first_choice">
     <h1>今日は何を運ぶ？</h1>
+    <div class="tumikomi">
+      <div class="default_truck">
+        <img src="img/truck.jpg" alt="デフォルトのトラック">
+      </div>
 
-    <ul>
-      <li>
-        <p>お水</p>
-        <img src="img/box.jpg" alt="荷姿">
-        <img src="img/water.jpg" alt="水">        
-      </li>
+      <ul class="ec_item">
+        <div class="item_up">
+          <li id="water">
+            <p>お水</p>
+              <img src="img/box.png" alt="荷姿">
+              <img src="img/water.png" alt="水" class="item">        
+          </li>
 
-      <li>
-        <p>洋服</p>
-        <img src="img/box.jpg" alt="荷姿">
-        <img src="img/clothes.jpg" alt="洋服">
-      </li>
+          <li id="clothes">
+            <p>洋服</p>
+            <img src="img/box.png" alt="荷姿">
+            <img src="img/clothes.png" alt="洋服" class="item">
+          </li>
 
-      <li>
-        <p>家具</p>
-        <img src="img/box.jpg" alt="荷姿">
-        <img src="img/furniture.jpg" alt="家具">
-      </li>
+          <li>
+            <p id="furniture">家具</p>
+            <img src="img/box.png" alt="荷姿">
+            <img src="img/furniture.png" alt="家具" class="item">
+          </li>
+        </div>
 
-      <li>
-        <p>シューズ</p>
-        <img src="img/box.jpg" alt="荷姿">
-        <img src="img/shoes.jpg" alt="シューズ">
-      </li>
+        <div class="item_down">
+          <li id="shoes">
+            <p>シューズ</p>
+            <img src="img/box.png" alt="荷姿">
+            <img src="img/shoes.jpg" alt="シューズ" class="item">
+          </li>
 
-      <li>
-        <p>化粧品</p>
-        <img src="img/box.jpg" alt="荷姿">
-        <img src="img/cosme.jpg" alt="化粧品">
-      </li>
-
-    </ul>
+          <li id="cosme">
+            <p>化粧品</p>
+            <img src="img/box.png" alt="荷姿">
+            <img src="img/cosme.jpg" alt="化粧品" class="item">
+          </li>
+        </div>
+      </ul>
+    </div>
 
   </div>
+
+  <button>決定</button>
 
   <!--②選ぶ項目二つ目  -->
   <!-- ①を選び終わったらこちらを表示する -->
@@ -100,6 +110,10 @@
       </div>
     </div>
 
+  </div>
+
+  <div>
+    <button>運ぶ</button>
   </div>
 
   <!-- トラックの後ろ姿 音が鳴る+走っているように動く -->

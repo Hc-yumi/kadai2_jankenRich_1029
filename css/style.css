@@ -1,8 +1,58 @@
+body{
+  background-color: #FFEEFF;
+}
+
+/* --所持金-- */
+.money{
+  position: fixed;
+  background-color: black;
+  color: #FFEEFF;
+  padding: auto;
+  font-size: 3rem;
+}
 
 
+.default_truck img{
+  width: 200%;
 
+}
 
-/* --truck の選択 -- */
+/* --①運ぶものの選択-- */
+.first_choice{
+  padding: 10% 0 10% 0;
+}
+.tumikomi{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1%;
+}
+
+.item_up{
+  display: flex;
+  padding: 0 5% 5% 0;
+}
+
+.item_down{
+  display: flex;
+  padding: 0 0 0 15%;
+}
+
+.ec_item img{
+  border-radius: 20%;
+}
+
+.ec_item img:hover{
+  transform: scale(1.2,1.2);
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.item{
+  width: 55%;
+}
+ 
+
+/* --②truck の選択 -- */
 .truck{
   display: flex;
 }
