@@ -1,55 +1,95 @@
-let x = 0;
-let water = 8;
-let clothes = 6;
-let furniture = 10;
-let shoes = 2;
-let cosme = 4;
+// 1.対象のモノの個数を選択したら、その定義に入っている数量を加算する
+      //(見え方は重量にする)
+// 2.3つ選ぶ
+// 3.3つ選んだら非活性にする
+// 4.運ぶものを決めたら決定ボタンを押す
+// 5.決定ボタンを押したら画面が遷移する
+// 6.トラックの積載可能重量を割り当てる
+// 7.トラックの車格を選ぶ
+// 8.車格に応じて所持金が減る
+// 9.2.で決めた荷物の重量よりも小さければOK,重ければNGを出す（アラート）
+// 10.重量よりも重ければペナルティ-¥30,000 ／ 重量よりも軽ければ+¥30,000
 
-$("#water").on("click",function(){
-  $("#water").animate({
-    "marginLeft":"-300px"
-  });
-  console.log(x =+ water);
-  $("#water").width("-20%");
-  $("#water").fadeOut(2000);
+
+// $("#water").on("click",function(){
+  // $("#water").animate({
+    // "marginLeft":"-300px"
+  // });
+  // console.log(x =+ water);
+  // $("#water").width("-20%");
+  // $("#water").fadeOut(2000);
+// });
+
+$(function() {
+
+  $("select").change(function() {
+  
+    var hairetu = [];
+    for(var i = 0; i < $(".baggage_item").length; i++){
+  
+      var item_wight = $(".baggage_item").eq(i).data("weight");
+      var item_select = $(".baggage_item").eq(i).next("select").find("option:selected").data("num");
+  
+    
+      if( item_select > 0 ) {
+        hairetu.push(item_wight * item_select);
+      } else {
+        0;
+      }
+    }
+  
+    var total = 0;
+    for(var j = 0; j < hairetu.length; j++){
+      total += hairetu[j];
+    }  
+  
+    $("#item_weight_total").val(total + "kg");
+
+    $("#decision").on("click",function(){
+      console.log(total);
+    })
+     
+  });  
+
+ 
 });
 
-$("#clothes").on("click",function(){
-  $("#clothes").animate({
-    "marginLeft":"-300px"
-  });
-  console.log(x =+ clothes);
-  $("#clothes").width("-20%");
-  $("#clothes").fadeOut(2000);
-});
 
-$("#furniture").on("click",function(){
-  $("#furniture").animate({
-    "marginLeft":"-300px"
-  });
-  console.log(x =+ furniture);
-  $("#furniture").width("-20%");
-  $("#furniture").fadeOut(2000);
-});
+// $("#clothes").on("click",function(){
+//   $("#clothes").animate({
+//     "marginLeft":"-300px"
+//   });
+//   console.log(x =+ clothes);
+//   $("#clothes").width("-20%");
+//   $("#clothes").fadeOut(2000);
+// });
 
-$("#shoes").on("click",function(){
-  $("#shoes").animate({
-    "marginLeft":"-300px"
-  });
-  console.log(x =+ shoes);
-  $("#shoes").width("-20%");
-  $("#shoes").fadeOut(2000);
-});
+// $("#furniture").on("click",function(){
+//   $("#furniture").animate({
+//     "marginLeft":"-300px"
+//   });
+//   console.log(x =+ furniture);
+//   $("#furniture").width("-20%");
+//   $("#furniture").fadeOut(2000);
+// });
 
-$("#cosme").on("click",function(){
-  $("#cosme").animate({
-    "marginLeft":"-300px"
-  });
-  console.log(x =+ cosme);
-  $("#cosme").width("-20%");
-  $("#cosme").fadeOut(2000);
-});
+// $("#shoes").on("click",function(){
+//   $("#shoes").animate({
+//     "marginLeft":"-300px"
+//   });
+//   console.log(x =+ shoes);
+//   $("#shoes").width("-20%");
+//   $("#shoes").fadeOut(2000);
+// });
 
+// $("#cosme").on("click",function(){
+//   $("#cosme").animate({
+//     "marginLeft":"-300px"
+//   });
+//   console.log(x =+ cosme);
+//   $("#cosme").width("-20%");
+//   $("#cosme").fadeOut(2000);
+// });
 
 
 

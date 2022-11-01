@@ -29,9 +29,9 @@
 
   <!-- ①選ぶ項目一つ目 -->
   <div class="first_choice">
-    <h1>あなたはスーパーの店長さん</h1>
+    <h1>あなたはドン・キホーテ店長さん</h1>
     <p>今日も沢山の仕入れが必要だなあ・・。</p>
-    <p>まずは仕入れるものを選ぶ！</p>
+    <p>まずは仕入れるものと個数を選ぼう！</p>
 
   
     <div class="tumikomi">
@@ -43,47 +43,158 @@
         <div class="item_up">
           <li id="water">
             <p>お水</p>
-              <img src="img/box.png" alt="荷姿">
-              <img src="img/water.png" alt="水" class="item">        
-          </li>
+              <!-- <img src="img/box.png" alt="荷姿"> -->
+              <img src="img/water.png" alt="水" class="item"> 
+              
+              <div class="form-box">
+                <p class="baggage_item" data-weight="20">
+                  <span class="weight">【重量 20kg／個】</span>
+                </p>
+                <select name="water数量">
+                  <option data-num="0" value="0個" selected>0個</option>
+                  <option data-num="10" value="10個">10個</option>
+                  <option data-num="20" value="20個">20個</option>
+                  <option data-num="30" value="30個">30個</option>
+                </select>   
+              </div>               
+          </li>      
+
 
           <li id="clothes">
             <p>洋服</p>
-            <img src="img/box.png" alt="荷姿">
+            <!-- <img src="img/box.png" alt="荷姿"> -->
             <img src="img/clothes.png" alt="洋服" class="item">
+
+            <div class="form-box">
+              <p class="baggage_item" data-weight="10">
+                <span class="weight">【重量 10kg／箱】</span>
+              </p>
+              <select name="洋服数量">
+                <option data-num="0" value="0箱" selected>0箱</option>
+                <option data-num="100" value="100箱">100箱</option>
+                <option data-num="200" value="200箱">200箱</option>
+                <option data-num="300" value="300箱">300箱</option>
+              </select>   
+            </div>   
           </li>
 
           <li>
             <p id="furniture">家具</p>
-            <img src="img/box.png" alt="荷姿">
+            <!-- <img src="img/box.png" alt="荷姿"> -->
             <img src="img/furniture.png" alt="家具" class="item">
-          </li>
-        </div>
 
-        <div class="item_down">
+            <div class="form-box">
+              <p class="baggage_item" data-weight="40">
+                <span class="weight">【重量 40kg／セット】</span>
+              </p>
+              <select name="家具数量">
+                <option data-num="0" value="0セット" selected>0個</option>
+                <option data-num="1" value="1セット">1セット</option>
+                <option data-num="2" value="2セット">2セット</option>
+                <option data-num="3" value="3セット">3セット</option>
+              </select>   
+            </div>   
+          </li>
+        
           <li id="shoes">
             <p>シューズ</p>
-            <img src="img/box.png" alt="荷姿">
-            <img src="img/shoes.jpg" alt="シューズ" class="item">
+            <!-- <img src="img/box.png" alt="荷姿"> -->
+            <img src="img/shoes.png" alt="シューズ" class="item">
+
+            <div class="form-box">
+              <p class="baggage_item" data-weight="2">
+                <span class="weight">【重量 2kg／個】</span>
+              </p>
+              <select name="シューズ数量">
+                <option data-num="0" value="0個" selected>0個</option>
+                <option data-num="100" value="1個">100個</option>
+                <option data-num="200" value="2個">200個</option>
+                <option data-num="300" value="3個">300個</option>
+              </select>   
+            </div>   
           </li>
 
           <li id="cosme">
             <p>化粧品</p>
-            <img src="img/box.png" alt="荷姿">
-            <img src="img/cosme.jpg" alt="化粧品" class="item">
+            <!-- <img src="img/box.png" alt="荷姿"> -->
+            <img src="img/cosme.png" alt="化粧品" class="item">
+
+            <div class="form-box">
+              <p class="baggage_item" data-weight="10">
+                <span class="weight">【重量 10kg／個】</span>
+              </p>
+              <select name="化粧品数量">
+                <option data-num="0" value="0個" selected>0個</option>
+                <option data-num="100" value="100個">100個</option>
+                <option data-num="200" value="200個">200個</option>
+                <option data-num="300" value="300個">300個</option>
+              </select>   
+            </div>   
           </li>
+
+          <li id="snack">
+            <p>お菓子</p>
+            <!-- <img src="img/box.png" alt="荷姿"> -->
+            <img src="img/okashi.png" alt="お菓子" class="item">
+
+            <div class="form-box">
+              <p class="baggage_item" data-weight="20">
+                <span class="weight">【重量 20kg／箱】</span>
+              </p>
+              <select name="お菓子数量">
+                <option data-num="0" value="0箱" selected>0箱</option>
+                <option data-num="1" value="10箱">10箱</option>
+                <option data-num="2" value="20箱">20箱</option>
+                <option data-num="3" value="30箱">30箱</option>
+              </select>   
+            </div>   
+          </li>
+
+          <li id="kaden">
+            <p>家電</p>
+            <!-- <img src="img/box.png" alt="荷姿"> -->
+            <img src="img/kaden.png" alt="家電" class="item">
+
+            <div class="form-box">
+              <p class="baggage_item" data-weight="10">
+                <span class="weight">【重量 30kg／台】</span>
+              </p>
+              <select name="家電数量">
+                <option data-num="0" value="0台" selected>0台</option>
+                <option data-num="1" value="1台">1台</option>
+                <option data-num="2" value="2台">2台</option>
+                <option data-num="3" value="3台">3台</option>
+              </select>   
+            </div>   
+          </li>
+
+          
+          
+
+        </div>
+
+        <!-- 解：readonly 直接書き込めないようにするおまじない -->
+        <div class="form-box">
+          <label class="form-label">重量合計：</label>
+          <input id="item_weight_total" class="" name="重量" value="0kg" readonly>
         </div>
       </ul>
     </div>
 
   </div>
 
-  <button>決定</button>
+  <div class="kettei">
+    <p>輸送する商品は決まったかな。</p>
+    <a class="inline-block button" href="#syakaku" id="decision">決定</a>
+  </div>
+
+ 
 
   <!--②選ぶ項目二つ目  -->
   <!-- ①を選び終わったらこちらを表示する -->
-  <div>
-    <h1>どんな車で運ぶ？</h1>
+  <div class="car_choice" id="syakaku">
+    <h1 class="text_center">次は車格を決めていくよ！</h1>
+    <p class="text_center">どんな車で運ぶ？</p>
     <div>
       <img src="img/truck.jpg" alt="デフォルトのトラック">
     </div>

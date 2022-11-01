@@ -1,3 +1,8 @@
+/* 1. 品物をホバーしたら荷姿になるようにする */
+/* 2. 横スクロールと取り入れる */
+/* 3. 最初の文字は一文字ずつ表示する ゲームみたいに */
+/* 4. 荷物の種類を選ぶと、トラックへ消えていくスタイル */
+
 body{
   /* background-image: url(../img/yuso.jpg); */
   background-size: cover;
@@ -9,12 +14,15 @@ body{
   background-color: black;
   color: #FFEEFF;
   padding: auto;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 
 .default_truck img{
-  width: 200%;
+  width: 30%;
+  margin: auto;
+  display: flex;
+  padding: 0 0 10% 0;  
 
 }
 
@@ -23,30 +31,32 @@ body{
   padding: 10% 0 10% 0;
 }
 .tumikomi{
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  padding: 0 1%;
+  padding: 0 1%; */
 }
 
-.item_up{
+.item_up{  
   display: flex;
-  padding: 0 5% 5% 0;
-}
-
-.item_down{
-  display: flex;
-  padding: 0 0 0 15%;
+  margin: auto;
+  justify-content: center;
+  flex-wrap:wrap;
 }
 
 .ec_item img{
-  border-radius: 20%;
+  /* border-radius: 20%; */
 }
 
 .ec_item img:hover{
   transform: scale(1.2,1.2);
   transition: 1s all;
   cursor: pointer;
+  background: url(../img/box_1.png);
 }
+
+/* .item:hover{
+  background: url(../img/box_1.png);
+} */
 
 .item{
   width: 55%;
@@ -62,4 +72,34 @@ body{
   transform: scale(1.2,1.2);
   transition: 1s all;
   cursor: pointer;
+}
+
+.button{
+  background:#FFCCFF;
+  padding:0.5em 0.5em;
+  /* border:black 2px solid; */
+  text-decoration:none;
+  font-size:1.3em;
+  display: block;
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+}
+.inline-block{
+  display:inline-block;
+}
+
+.kettei{
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+
+/* --②車格の選択-- */
+.text_center{
+  text-align: center;
+}
+
+.car_choice{
+  padding: 3% 0 5% 0;
 }
