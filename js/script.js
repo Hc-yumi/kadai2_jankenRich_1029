@@ -45,12 +45,32 @@ $(function() {
   
     $("#item_weight_total").val(total + "kg");
 
-    $("#decision").on("click",function(){
-      console.log(total);
-    })
-     
+    // $("#decision").on("click",function(){
+    //   console.log(total);
+    // })
+
+    if( total > 0 && total <= 1000) {
+        // alert("軽");
+        console.log("軽");
+        let kei;
+
+      } else if (total > 1000 && total <= 2000){
+        // alert("2t");
+        console.log("2t");
+        let niton;
+      } else if(total > 2000 && total <= 4000){
+        // alert("4t");
+        console.log("4t");
+        let yonton;
+      } else if (total > 4000 && total <= 10000){
+        // alert("10t")
+        console.log("10t");
+        let zyuton;
+      }
+
   });  
 
+  // click イベントとif文を使って、輸送可否判断のアニメーションつくる！
  
 });
 
