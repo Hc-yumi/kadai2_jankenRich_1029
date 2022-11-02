@@ -68,9 +68,41 @@ $(function() {
         let zyuton;
       }
 
+      $("#kei").on({
+        "click":function(){
+          console.log("クリックされました");
+        },
+        "mouseenter":function(){
+          console.log("マウスが重なりました");
+        }
+      })
+
+      // function judge(){        
+      //   if(total < 1000){
+      //     alert("上手く運べたね♪");
+      //   } else{
+      //     alert("積載オーバー・・");
+      //   }
+      // }
+
   });  
 
   // click イベントとif文を使って、輸送可否判断のアニメーションつくる！
+  
+  
+  // $("#kei").on("click",function(){
+  //   let keisya;
+  //   if(total < 1000){
+  //     alert("OK");
+  //     $("#result").html("うまく運べたね♪")
+
+  //   }else{
+  //     alert("NG");
+  //     $("#result").html("積載オーバー・・")
+  //   }
+  // })
+
+  
  
 });
 
