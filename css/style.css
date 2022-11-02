@@ -8,6 +8,10 @@ body{
   background-size: cover;
 }
 
+.text_center{
+  text-align: center;
+}
+
 /* --所持金-- */
 .money{
   position: fixed;
@@ -61,11 +65,27 @@ body{
 .item{
   width: 55%;
 }
+
+.gokei{
+  padding: 5% 0 0 0;
+  width: auto;
+  display: block;
+  text-align: center;
+  justify-content:center ;
+}
  
 
+
 /* --②truck の選択 -- */
+.defo_truck{
+  display: block;
+  text-align: center;  
+}
+
 .truck{
   display: flex;
+  justify-content: center;
+  padding: 5% 0 0 0 ;
 }
 
 .truck_choice img:hover{
@@ -96,10 +116,15 @@ body{
 }
 
 /* --②車格の選択-- */
-.text_center{
-  text-align: center;
-}
 
 .car_choice{
   padding: 3% 0 5% 0;
+}
+
+/* 判定 */
+
+.shipping{
+  display: block;
+  margin: auto;
+  font-size: 1.5rem;
 }

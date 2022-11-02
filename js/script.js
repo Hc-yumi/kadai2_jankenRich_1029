@@ -52,40 +52,82 @@ $(function() {
     if( total > 0 && total <= 1000) {
         // alert("軽");
         console.log("軽");
-        let kei;
+        // let kei;
+        // $("#kei").on("click",function(){
+        //   if( total < 1000 ){
+        //     alert("OK");
+        //   } else {
+        //     alert("NG");
+        //   }          
+        // })
+
 
       } else if (total > 1000 && total <= 2000){
         // alert("2t");
         console.log("2t");
-        let niton;
+        // let niton;
+        // $("#niton").on("click",function(){
+        //   alert("OK");
+        // })
+
       } else if(total > 2000 && total <= 4000){
         // alert("4t");
         console.log("4t");
-        let yonton;
+        // let yonton;
+        // $("#yonton").on("click",function(){
+        //   alert("OK");
+        // })
+
       } else if (total > 4000 && total <= 10000){
         // alert("10t")
         console.log("10t");
-        let zyuton;
-      }
+        // let zyuton;
+        // $("#jyuton").on("click",function(){
+        //   alert("OK");
+        // })
+      }  
 
-      $("#kei").on({
-        "click":function(){
-          console.log("クリックされました");
-        },
-        "mouseenter":function(){
-          console.log("マウスが重なりました");
-        }
-      })
+      //車格判定をする
 
-      // function judge(){        
-      //   if(total < 1000){
-      //     alert("上手く運べたね♪");
-      //   } else{
-      //     alert("積載オーバー・・");
-      //   }
-      // }
+  const car_var = total;
+
+  $("#kei").on("click",function(){
+    if( car_var > 0 && car_var <= 1000 ){
+      alert("OK");
+    } else {
+      alert("NG");
+    }          
+  })
+
+  $("#niton").on("click",function(){
+    if( car_var <= 2000 ){
+      alert("OK");
+    } else {
+      alert("NG");
+    }          
+  })
+
+  $("#yonton").on("click",function(){
+    if( car_var <= 4000 ){
+      alert("OK");
+    } else {
+      alert("NG");
+    }          
+  })
+
+  $("#jyuton").on("click",function(){
+    if( car_var <= 10000 ){
+      alert("OK");
+    } else {
+      alert("NG");
+    }          
+  })
+      
+      
 
   });  
+
+  
 
   // click イベントとif文を使って、輸送可否判断のアニメーションつくる！
   
@@ -100,11 +142,36 @@ $(function() {
   //     alert("NG");
   //     $("#result").html("積載オーバー・・")
   //   }
-  // })
-
-  
- 
+  // }) 
 });
+
+// $(function(){
+  // $("#kei").on('click',function(){
+  //   alert("OK");
+  //   if(total<1000){
+  //     alert("うまいね");
+  //   }else{
+  //     alert("下手だね");
+  //   }
+  // })
+// })
+
+// $("#kei").on({
+//   "click":function(){
+//     console.log("クリックされました");
+//   },
+//   "mouseenter":function(){
+//     console.log("マウスが重なりました");
+//   }
+// })
+
+// function judge(){        
+//   if(total < 1000){
+//     alert("上手く運べたね♪");
+//   } else{
+//     alert("積載オーバー・・");
+//   }
+// }
 
 
 // $("#clothes").on("click",function(){

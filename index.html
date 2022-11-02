@@ -14,7 +14,7 @@
 
 </head>
 <body>
-  <header>色んな荷物を倉庫へ運ぼう！</header>
+  <header class="text_center">色んな荷物を倉庫へ運ぼう！</header>
 
   <table class="money">
     <tr>
@@ -29,9 +29,9 @@
 
   <!-- ①選ぶ項目一つ目 -->
   <div class="first_choice">
-    <h1>あなたはドン・キホーテ店長さん</h1>
-    <p>今日も沢山の仕入れが必要だなあ・・。</p>
-    <p>まずは仕入れるものと個数を選ぼう！</p>
+    <h1 class="text_center">あなたはドン・キホーテ店長さん</h1>
+    <p class="text_center">今日も沢山の仕入れが必要だなあ・・。</p>
+    <p class="text_center">まずは仕入れるものと個数を選ぼう！</p>
 
   
     <div class="tumikomi">
@@ -174,9 +174,9 @@
         </div>
 
         <!-- 解：readonly 直接書き込めないようにするおまじない -->
-        <div class="form-box">
+        <div class="gokei">
           <label class="form-label">重量合計：</label>
-          <input id="item_weight_total" class="" name="重量" value="0kg" readonly>
+          <input id="item_weight_total" class="form_label_in" name="重量" value="0kg" readonly>
         </div>
       </ul>
     </div>
@@ -195,7 +195,7 @@
   <div class="car_choice" id="syakaku">
     <h1 class="text_center">次は車格を決めていくよ！</h1>
     <p class="text_center">どんな車で運ぶ？</p>
-    <div>
+    <div class="defo_truck">
       <img src="img/truck.jpg" alt="デフォルトのトラック">
     </div>
 
@@ -207,19 +207,19 @@
       </div>
 
       <!-- 2t -->
-      <div class="truck_choice" id="2t">
+      <div class="truck_choice" id="niton">
         <img src="img/2t.jpg" alt="2tトラック">
         <p>2t トラック</p>
       </div>
 
       <!-- 4t -->
-      <div class="truck_choice" id="4t">
+      <div class="truck_choice" id="yonton">
         <img src="img/4t.jpg" alt="4tトラック">
         <p>4t トラック</p>
       </div>
 
       <!-- 10t -->
-      <div class="truck_choice" id="10t">
+      <div class="truck_choice" id="jyuton">
         <img src="img/10t.jpg" alt="10tトラック">
         <p>10t トラック</p>
       </div>
@@ -228,7 +228,7 @@
   </div>
 
   <div>
-    <button>運ぶ</button>
+    <button class="shipping">運ぶ</button>
   </div>
 
   <!-- トラックの後ろ姿 音が鳴る+走っているように動く -->
