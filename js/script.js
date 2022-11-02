@@ -24,11 +24,11 @@ $(function() {
 
   $("select").change(function() {
   
-    var hairetu = [];
-    for(var i = 0; i < $(".baggage_item").length; i++){
+    let hairetu = [];
+    for(let i = 0; i < $(".baggage_item").length; i++){
   
-      var item_wight = $(".baggage_item").eq(i).data("weight");
-      var item_select = $(".baggage_item").eq(i).next("select").find("option:selected").data("num");
+      let item_wight = $(".baggage_item").eq(i).data("weight");
+      let item_select = $(".baggage_item").eq(i).next("select").find("option:selected").data("num");
   
     
       if( item_select > 0 ) {
@@ -38,8 +38,8 @@ $(function() {
       }
     }
   
-    var total = 0;
-    for(var j = 0; j < hairetu.length; j++){
+    let total = 0;
+    for(let j = 0; j < hairetu.length; j++){
       total += hairetu[j];
     }  
   
