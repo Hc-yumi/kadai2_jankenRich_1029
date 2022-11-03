@@ -41,18 +41,13 @@ $(function() {
     let total = 0;
     for(let j = 0; j < hairetu.length; j++){
       total += hairetu[j];
-    }  
-  
+    }    
     $("#item_weight_total").val(total + "kg");
-
-    // $("#decision").on("click",function(){
-    //   console.log(total);
-    // })
 
     if( total > 0 && total <= 1000) {
         // alert("軽");
         console.log("軽");
-        // let kei;
+        let kei = 1000;
         // $("#kei").on("click",function(){
         //   if( total < 1000 ){
         //     alert("OK");
@@ -61,11 +56,10 @@ $(function() {
         //   }          
         // })
 
-
       } else if (total > 1000 && total <= 2000){
         // alert("2t");
         console.log("2t");
-        // let niton;
+        let niton = 2000;
         // $("#niton").on("click",function(){
         //   alert("OK");
         // })
@@ -73,7 +67,7 @@ $(function() {
       } else if(total > 2000 && total <= 4000){
         // alert("4t");
         console.log("4t");
-        // let yonton;
+        let yonton = 4000;
         // $("#yonton").on("click",function(){
         //   alert("OK");
         // })
@@ -81,51 +75,71 @@ $(function() {
       } else if (total > 4000 && total <= 10000){
         // alert("10t")
         console.log("10t");
-        // let zyuton;
+        let zyuton = 10000;
         // $("#jyuton").on("click",function(){
         //   alert("OK");
         // })
       }  
 
-      //車格判定をする
 
-  const car_var = total;
+      //ローカルストレージを使う方法
+      function saveData(){
+        var score = new scoretotal();
+        localStorage.setItem(total);
+      }
+      localStorage.setItem('key', 'value1');
+      localStorage.saveKey = 'value2';
 
-  $("#kei").on("click",function(){
-    if( car_var > 0 && car_var <= 1000 ){
-      alert("OK");
-    } else {
-      alert("NG");
-    }          
-  })
+      //車格判定をする 
 
-  $("#niton").on("click",function(){
-    if( car_var <= 2000 ){
-      alert("OK");
-    } else {
-      alert("NG");
-    }          
-  })
+   console.log(total);
+   
 
-  $("#yonton").on("click",function(){
-    if( car_var <= 4000 ){
-      alert("OK");
-    } else {
-      alert("NG");
-    }          
-  })
+   $("#kei").on("click",function(){
+     if( total > 0 && total <= 1000 ){
+       alert("OK");
+     } else {
+       alert("NG");
+     }          
+   })
+ 
+   $("#niton").on("click",function(){
+     if( total <= 2000 ){
+       alert("OK");
+     } else {
+       alert("NG");
+     }          
+   })
+ 
+   $("#yonton").on("click",function(){
+     if( total <= 4000 ){
+       alert("OK");
+     } else {
+       alert("NG");
+     }          
+   })
+ 
+   $("#jyuton").on("click",function(){
+     if( total <= 10000 ){
+       alert("OK");
+     } else {
+       alert("NG");
+     }          
+   })
 
-  $("#jyuton").on("click",function(){
-    if( car_var <= 10000 ){
-      alert("OK");
-    } else {
-      alert("NG");
-    }          
-  })
+   //トラックの後ろ姿が動く＋音がなる
+   $("#shipping").on("click",function(){
+    $("#plya_ship").get(0).play();
+
+   });
+
+     
       
       
 
   });  
+
+   
 
   
 

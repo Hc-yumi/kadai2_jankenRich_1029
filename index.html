@@ -29,7 +29,7 @@
 
   <!-- ①選ぶ項目一つ目 -->
   <div class="first_choice">
-    <h1 class="text_center">あなたはドン・キホーテ店長さん</h1>
+    <h1 class="text_center">あなたは大型スーパーの店長さん</h1>
     <p class="text_center">今日も沢山の仕入れが必要だなあ・・。</p>
     <p class="text_center">まずは仕入れるものと個数を選ぼう！</p>
 
@@ -166,10 +166,7 @@
                 <option data-num="3" value="3台">3台</option>
               </select>   
             </div>   
-          </li>
-
-          
-          
+          </li>          
 
         </div>
 
@@ -195,51 +192,55 @@
   <div class="car_choice" id="syakaku">
     <h1 class="text_center">次は車格を決めていくよ！</h1>
     <p class="text_center">どんな車で運ぶ？</p>
-    <div class="defo_truck">
+    <!-- <div class="defo_truck">
       <img src="img/truck.jpg" alt="デフォルトのトラック">
-    </div>
+    </div> -->
 
     <div class="truck">      
       <!-- 軽 -->
       <div class="truck_choice" id="kei">
-        <img src="img/kei.jpg" alt="軽">
-        <p>軽自動車</p>
+        <img src="img/kei.png" alt="軽">
+        <p class="text_center">軽自動車</p>
       </div>
 
       <!-- 2t -->
       <div class="truck_choice" id="niton">
-        <img src="img/2t.jpg" alt="2tトラック">
-        <p>2t トラック</p>
+        <img src="img/2t.png" alt="2tトラック">
+        <p class="text_center">2t トラック</p>
       </div>
 
       <!-- 4t -->
       <div class="truck_choice" id="yonton">
-        <img src="img/4t.jpg" alt="4tトラック">
-        <p>4t トラック</p>
+        <img src="img/4t.png" alt="4tトラック">
+        <p class="text_center">4t トラック</p>
       </div>
 
       <!-- 10t -->
       <div class="truck_choice" id="jyuton">
-        <img src="img/10t.jpg" alt="10tトラック">
-        <p>10t トラック</p>
+        <img src="img/10t.png" alt="10tトラック">
+        <p class="text_center">10t トラック</p>
       </div>
     </div>
 
   </div>
 
+  <!-- クリック後、走り出す音が鳴る＋画像が揺れる（走っているように） -->
   <div>
-    <button class="shipping">運ぶ</button>
+    <button class="shipping" id="shipping"><a href="#ship">運ぶ</a></button>
   </div>
 
   <!-- トラックの後ろ姿 音が鳴る+走っているように動く -->
-  <div>
+  <audio src="" id="play_ship"></audio>
+  <div class="result_truck" id="ship">
     <img src="img/back_truck.jpg" alt="トラック後ろ姿" class="add">
   </div>
 
   <!-- resultとしてここに結果を示す -->
-  <p>運べるかな？</p>
-  <p id="result"></p>
-  <p>金額表示</p>
+  <div class="text_center last">
+    <p>運べるかな？</p>
+    <p id="result"></p>
+    <p>金額表示</p>
+  </div>
 
 
 
