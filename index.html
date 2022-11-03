@@ -19,7 +19,7 @@
 <body>
   <header>
     <p class="first_text">色んな荷物を運ぼう！<br>君はじょうずに運べるかな？</p>
-    <p class="chall first_text"><a href="#main_container">
+    <p class="chall first_text"><a href="#main_container" class="inline-block bt">
       Challenge</a></p>
   </header>
   
@@ -36,7 +36,7 @@
         <img src="img/truck.jpg" alt="デフォルトのトラック">
       </div>
 
-      <div class="next_1"><a href="#tumi">はこびたい商品を見る</a></div>
+      <div class="next_1"><a href="#tumi" class="inline-block btt">はこびたい商品を見る</a></div>
   </div>  
 
      <!-- ①選ぶ項目一つ目 -->
@@ -180,10 +180,9 @@
         </ul>
 
         <div class="kettei">
-          <a class="inline-block button" href="#syakaku" id="decision">決まったらこちらをクリック！</a>
+          <a class="inline-block button" href="#car_fix" id="decision">決まったらこちらをクリック！</a>
           <audio src="/sound/result_push.mp3" id="play_kettei"></audio>
         </div>
-
       </div>
 
   
@@ -192,86 +191,92 @@
 
   <!--②選ぶ項目二つ目  -->
   <!-- ①を選び終わったらこちらを表示する -->
-
-  <div class="want_fix">
-    <table class="money">
-      <tr>
-        <th>初期所持金</th>
-        <th>¥100,000</th>
-      </tr>
-
-      <tr>
-        <td>残金</td>
-        <td id="now_money">¥100,000</td>
-      </tr>
-
-      <tr>
-        <td>ボーナス</td>
-        <td id="result_money">¥0</td>
-      </tr>
-    </table>
-  </div>
-
   
-  <div class="car_choice" id="syakaku">
-    <h1 class="text_center">次は車格を決めていくよ！</h1>
-    <p class="text_center">どんな車で運ぶ？</p>
-    <!-- <div class="defo_truck">
-      <img src="img/truck.jpg" alt="デフォルトのトラック">
-    </div> -->
+  <div id="car_fix">
+    <div class="want_fix">
+      <table class="money">
+        <tr>
+          <th>初期所持金</th>
+          <th>¥100,000</th>
+        </tr>
 
-    <div class="truck">      
-      <!-- 軽 -->
-      <div class="truck_choice" id="kei">
-        <img src="img/kei.png" alt="軽">
-        <p class="text_center">軽自動車</p>
-      </div>
+        <tr>
+          <td>残金</td>
+          <td id="now_money">¥100,000</td>
+        </tr>
 
-      <!-- 2t -->
-      <div class="truck_choice" id="niton">
-        <img src="img/2t.png" alt="2tトラック">
-        <p class="text_center">2t トラック</p>
-      </div>
-
-      <!-- 4t -->
-      <div class="truck_choice" id="yonton">
-        <img src="img/4t.png" alt="4tトラック">
-        <p class="text_center">4t トラック</p>
-      </div>
-
-      <!-- 10t -->
-      <div class="truck_choice" id="jyutton">
-        <img src="img/10t.png" alt="10tトラック">
-        <p class="text_center">10t トラック</p>
-      </div>
+        <tr>
+          <td>ボーナス</td>
+          <td id="result_money">¥0</td>
+        </tr>
+      </table>
     </div>
 
+    
+    <div class="car_choice">
+      <div class="ex_first">
+        <h1 class="text_center">次は はこぶ車の種類を決めていくよ！</h1>
+        <p class="text_center">どんな車で運ぶ？</p>
+      </div>
+
+      <div class="truck">      
+        <!-- 軽 -->
+        <div class="truck_choice" id="kei">
+          <!-- <a href="#truck_back"> -->
+            <img src="img/kei.png" alt="軽" class="truck_item">
+          <!-- </a> -->
+          <p class="text_center">軽自動車</p>
+        </div>
+
+        <!-- 2t -->
+        <div class="truck_choice" id="niton">
+          <!-- <a href="#truck_back"> -->
+            <img src="img/2t.png" alt="2tトラック">
+          <!-- </a> -->
+          <p class="text_center">2t トラック</p>
+        </div>
+
+        <!-- 4t -->
+        <div class="truck_choice" id="yonton">
+          <!-- <a href="#truck_back"> -->
+            <img src="img/4t.png" alt="4tトラック">
+          <!-- </a> -->
+          <p class="text_center">4t トラック</p>
+        </div>
+
+        <!-- 10t -->
+        <div class="truck_choice" id="jyutton">
+          <!-- <a href="#truck_back"> -->
+            <img src="img/10t.png" alt="10tトラック">
+          <!-- </a> -->
+          <p class="text_center">10t トラック</p>
+        </div>
+      </div>
+
+      <div class="ship_start">
+          <a class="inline-block bt" href="#truck_back" id="move">さあ、さっそく はこぶよ</a>
+      </div>
+
+    </div>
+    
+    
   </div>
 
-  <!-- クリック後、走り出す音が鳴る＋画像が揺れる（走っているように） -->
-  <div  id="shipping">
-    <button class="shipping" id="shipping"><a href="#ship">運ぶ</a></button>
-  </div>
 
   <!-- トラックの後ろ姿 音が鳴る+走っているように動く -->
-  <div class="last_background">
+  <div class="last_background" id="truck_back">
     <audio src="/sound/start.mp3" id="play_ship"></audio>
     <div class="result_truck" id="ship">
       <img src="img/back_truck.jpg" id="back_truck"  alt="トラック後ろ姿" class="add">
     </div>
 
     <!-- resultとしてここに結果を示す -->
-    <div class="last" id="last">
-      <p id="result">運べるかな？</p>
-    </div>
+      <p id="result"></p>
+
+
   </div>
 
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
   <script src="js/script.js"></script>
 </body>
 </html>

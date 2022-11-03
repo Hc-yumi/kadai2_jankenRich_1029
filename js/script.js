@@ -109,12 +109,12 @@ $("#kei").on("click",function(){
    if( total > 0 && total <= 1000 ){
      alert("OK");
     //  action(true)
-     $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
+     $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
    } else {
     // action(false)
      alert("NG");
-     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
+     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
      
    }      
@@ -127,13 +127,13 @@ $("#kei").on("click",function(){
    if( total <= 2000 ){
      alert("OK");
     // action(true)
-     $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
+     $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
 
    } else {
     // action(false)
      alert("NG");
-     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
+     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
    }          
  })
@@ -144,12 +144,12 @@ $("#kei").on("click",function(){
    if( total <= 4000 ){
     //  alert("OK");
     // action(true)
-     $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
+     $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
    } else {
     // action(false)
     //  alert("NG");
-     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
+     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
    }          
  })
@@ -157,15 +157,16 @@ $("#kei").on("click",function(){
  //10t ¥50,000を所持金から引いた金額を表示 
  $("#jyutton").on("click",function(){
   $("#now_money").html('¥50,000');
+
    if( total <= 10000 ){
      alert("OK");
     // action(true)
-     $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
+     $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
    } else {
     // action(false)
      alert("NG");
-     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
+     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。').addClass('style');
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
    }          
  })
@@ -178,14 +179,34 @@ $("#kei").on("click",function(){
 //   }
 // }
 
-   //トラックの後ろ姿が動く＋音がなる
-   $('#shipping').on("click",function(){
-    // alert("OK");
+  //  トラックの後ろ姿が動く＋音がなる
+   $('#move').on("click",function(){
+    // alert("ラスト用");
     $("#play_ship").get(0).play(); 
     $("#back_truck").addClass('yure')
-    $("#last").addClass('result_text');    
-
+    $("#last").addClass('result_text'); 
    })
+
+  //  $('#niton').on("click",function(){
+  //   alert("ラスト用");
+  //   $("#play_ship").get(0).play(); 
+  //   $("#back_truck").addClass('yure')
+  //   $("#last").addClass('result_text'); 
+  //  })
+
+  //  $('#yonton').on("click",function(){
+  //   alert("ラスト用");
+  //   $("#play_ship").get(0).play(); 
+  //   $("#back_truck").addClass('yure')
+  //   $("#last").addClass('result_text'); 
+  //  })
+
+  //  $('#jyutton').on("click",function(){
+  //   alert("ラスト用");
+  //   $("#play_ship").get(0).play(); 
+  //   $("#back_truck").addClass('yure')
+  //   $("#last").addClass('result_text'); 
+  //  })
    
     // switch 
     // case kei
