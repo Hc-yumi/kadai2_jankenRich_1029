@@ -114,7 +114,7 @@ $("#kei").on("click",function(){
    } else {
     // action(false)
     //  alert("NG");
-     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。').addClass('style');;
+     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・・・・・。ペナルティマイナス¥100,000・・・まだまだだね。').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
      
    }      
@@ -133,7 +133,7 @@ $("#kei").on("click",function(){
    } else {
     // action(false)
     //  alert("NG");
-     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。').addClass('style');;
+     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・・・・・。ペナルティマイナス¥100,000・・・まだまだだね。').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
    }          
  })
@@ -149,7 +149,7 @@ $("#kei").on("click",function(){
    } else {
     // action(false)
     //  alert("NG");
-     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。').addClass('style');;
+     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・・・・・。ペナルティマイナス¥100,000・・・まだまだだね。').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
    }          
  })
@@ -166,7 +166,7 @@ $("#kei").on("click",function(){
    } else {
     // action(false)
     //  alert("NG");
-     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。').addClass('style');
+     $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・・・・・。ペナルティマイナス¥100,000・・・まだまだだね。').addClass('style');
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
    }          
  })
