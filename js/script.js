@@ -20,6 +20,18 @@
   // $("#water").fadeOut(2000);
 // });
 
+$(function(){
+  $('a[href^="#"]').click(function() {
+  var speed = 800; // スクロール速度(ミリ秒)
+  var href = $(this).attr("href");
+  var target = $(href == "#" || href == "" ? 'html' : href);
+  var position = target.offset().top;
+  $('html').animate({scrollTop:position}, speed, 'swing');
+  return false;
+  });
+});
+
+
 let total = 0;
 
 $(function() {
@@ -47,40 +59,20 @@ $(function() {
 
 
     if( total > 0 && total <= 1000) {
-        // alert("軽");
         console.log("軽");
-        // let kei = 1000;
-        // $("#kei").on("click",function(){
-        //   if( total < 1000 ){
-        //     alert("OK");
-        //   } else {
-        //     alert("NG");
-        //   }          
-        // })
+
 
       } else if (total > 1000 && total <= 2000){
-        // alert("2t");
         console.log("2t");
-        // let niton = 2000;
-        // $("#niton").on("click",function(){
-        //   alert("OK");
-        // })
+
 
       } else if(total > 2000 && total <= 4000){
-        // alert("4t");
         console.log("4t");
-        // let yonton = 4000;
-        // $("#yonton").on("click",function(){
-        //   alert("OK");
-        // })
+
 
       } else if (total > 4000 && total <= 10000){
-        // alert("10t")
         console.log("10t");
-        // let zyuton = 10000;
-        // $("#jyuton").on("click",function(){
-        //   alert("OK");
-        // })
+
       }  
 
 
@@ -98,81 +90,9 @@ $(function() {
       let yonton=30000;
       let jyutton =50000; 
 
-    
-  //  console.log(total);  
-  // let value = null;
-
-  //軽¥10,000を所持金から引いた金額を表示する
-  //  $("#kei").on("click",function(){
-  //   // alert("OK");
-  //   $("#now_money").html('¥90,000');
-
-  //    if( total > 0 && total <= 1000 ){
-  //      alert("OK");
-  //     //  value = OK;
-  //      $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
-  //      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
-  //    } else {
-  //      alert("NG");
-  //     //  value = NG;
-  //      $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
-  //      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
-       
-  //    }      
-    
-  //  })
- 
-  //2t ¥20,000を所持金から引いた金額を表示する
-  //  $("#niton").on("click",function(){
-  //   $("#now_money").html('¥80,000');
-  //    if( total <= 2000 ){
-  //      alert("OK");
-  //     //  value = OK;
-  //      $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
-  //      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
-
-  //    } else {
-  //      alert("NG");
-  //     //  value = NG;
-  //      $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
-  //      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
-  //    }          
-  //  })
-
-  //4t ¥30,000を所持金から引いた金額を表示する 
-  //  $("#yonton").on("click",function(){
-  //   $("#now_money").html('¥70,000');
-  //    if( total <= 4000 ){
-  //      alert("OK");
-  //     //  value = OK;
-  //      $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
-  //      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
-  //    } else {
-  //      alert("NG");
-  //     //  value = NG;
-  //      $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
-  //      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
-  //    }          
-  //  })
-
-
-  //10t ¥50,000を所持金から引いた金額を表示 
-  //  $("#jyuton").on("click",function(){
-  //   $("#now_money").html('¥50,000');
-  //    if( total <= 10000 ){
-  //      alert("OK");
-  //     //  value = OK;
-  //      $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
-  //      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
-  //    } else {
-  //      alert("NG");
-  //     //  value = NG;
-  //      $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
-  //      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
-  //    }          
-  //  })      
-
   });  
+
+});
 
   //決定ボタンを押した後の効果音
   $("#decision").on("click",function(){
@@ -180,30 +100,20 @@ $(function() {
   })
 
 
-  //トラックの後ろ姿が動く＋音がなる
-  $('#shipping').on("click",function(){
-    // alert("OK");
-    $("#play_ship").get(0).play(); 
-    $("#back_truck").addClass('yure')
-    $("#last").addClass('result_text');    
-
-   })
-
-});
-
 //軽¥10,000を所持金から引いた金額を表示する
 $("#kei").on("click",function(){
   // alert("OK");
   $("#now_money").html('¥90,000');
+  //  action(1000)
 
    if( total > 0 && total <= 1000 ){
      alert("OK");
-    //  value = OK;
+    //  action(true)
      $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
    } else {
+    // action(false)
      alert("NG");
-    //  value = NG;
      $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
      
@@ -216,13 +126,13 @@ $("#kei").on("click",function(){
   $("#now_money").html('¥80,000');
    if( total <= 2000 ){
      alert("OK");
-    //  value = OK;
+    // action(true)
      $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
 
    } else {
+    // action(false)
      alert("NG");
-    //  value = NG;
      $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
    }          
@@ -232,103 +142,69 @@ $("#kei").on("click",function(){
  $("#yonton").on("click",function(){
   $("#now_money").html('¥70,000');
    if( total <= 4000 ){
-     alert("OK");
-    //  value = OK;
+    //  alert("OK");
+    // action(true)
      $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
    } else {
-     alert("NG");
-    //  value = NG;
+    // action(false)
+    //  alert("NG");
      $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
    }          
  })
 
  //10t ¥50,000を所持金から引いた金額を表示 
- $("#jyuton").on("click",function(){
+ $("#jyutton").on("click",function(){
   $("#now_money").html('¥50,000');
    if( total <= 10000 ){
      alert("OK");
-    //  value = OK;
+    // action(true)
      $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
    } else {
+    // action(false)
      alert("NG");
-    //  value = NG;
      $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
    }          
- })      
-
-
-
-
-
-
-// $(function(){
-  // $("#kei").on('click',function(){
-  //   alert("OK");
-  //   if(total<1000){
-  //     alert("うまいね");
-  //   }else{
-  //     alert("下手だね");
-  //   }
-  // })
-// })
-
-// $("#kei").on({
-//   "click":function(){
-//     console.log("クリックされました");
-//   },
-//   "mouseenter":function(){
-//     console.log("マウスが重なりました");
-//   }
-// })
-
-// function judge(){        
-//   if(total < 1000){
-//     alert("上手く運べたね♪");
-//   } else{
-//     alert("積載オーバー・・");
+ })
+ 
+//  function action(flag){
+//   action(flag){
+//     alert("成功");
+//   }else{
+//     alert("失敗");
 //   }
 // }
 
+   //トラックの後ろ姿が動く＋音がなる
+   $('#shipping').on("click",function(){
+    // alert("OK");
+    $("#play_ship").get(0).play(); 
+    $("#back_truck").addClass('yure')
+    $("#last").addClass('result_text');    
 
-// $("#clothes").on("click",function(){
-//   $("#clothes").animate({
-//     "marginLeft":"-300px"
-//   });
-//   console.log(x =+ clothes);
-//   $("#clothes").width("-20%");
-//   $("#clothes").fadeOut(2000);
-// });
+   })
+   
+    // switch 
+    // case kei
+    // action(1000)
+    // case niton
+    // action(2000)
+    // case yonton
+    // action(4000)
+    // case jyutton
+    // action(10000)
+   
 
-// $("#furniture").on("click",function(){
-//   $("#furniture").animate({
-//     "marginLeft":"-300px"
-//   });
-//   console.log(x =+ furniture);
-//   $("#furniture").width("-20%");
-//   $("#furniture").fadeOut(2000);
-// });
-
-// $("#shoes").on("click",function(){
-//   $("#shoes").animate({
-//     "marginLeft":"-300px"
-//   });
-//   console.log(x =+ shoes);
-//   $("#shoes").width("-20%");
-//   $("#shoes").fadeOut(2000);
-// });
-
-// $("#cosme").on("click",function(){
-//   $("#cosme").animate({
-//     "marginLeft":"-300px"
-//   });
-//   console.log(x =+ cosme);
-//   $("#cosme").width("-20%");
-//   $("#cosme").fadeOut(2000);
-// });
-
-
-
+    // $("#shipping").click(function(){
+    //   var id = $(this).attr('id');
+    //   function action(upper){
+    //     if(true){
+    //       $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000');
+    //     } else{
+    //       $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。');
+    //     }
+    //   });
+   

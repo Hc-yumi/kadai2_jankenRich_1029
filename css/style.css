@@ -3,12 +3,6 @@
 /* 3. 最初の文字は一文字ずつ表示する ゲームみたいに */
 /* 4. 荷物の種類を選ぶと、トラックへ消えていくスタイル */
 
-body{
-  /* position: absolute; */
-  background-image: url(../img/cover.jpg);
-  background-size: cover;
-
-}
 
 header{ 
   background-color: #F5E653;
@@ -19,7 +13,7 @@ header{
   text-decoration: none;
   padding: 20% 0 0 0;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   vertical-align: middle;
   line-height: 1.5; 
@@ -28,57 +22,101 @@ header{
 
 .chall{
   padding: 5% 0 0 0;
+
 }
 
 .text_center{
   text-align: center;
 }
 
-/* --所持金-- */
-.money{
-  /* padding: 3% 0 0 0; */
-  width: 300px;
-  position: fixed;
-  position: absolute;
-  background-color: black;
-  color: #FFEEFF;
-  /* padding: auto; */
-  font-size: 1.5rem;
+
+/* 最初の説明 */
+.ex_1{
+  background-image: url(../img/cover.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .ex_first{
-  padding: 7% 0 7% 0;
-  line-height: 1.5; 
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 5% 0 0 0;
+  font-size: 1.5rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.7; 
+  font-weight: bold;
 }
 
-
 .default_truck img{
-  width: 60%;
+  box-sizing: border-box;
+  width: 45%;
   margin: auto;
-  display: flex;
-  padding: 0 0 10% 0;  
+  display: block;
+  
+  /* padding: 15% 0 0 0;   */
+}
+
+.default_truck{
+  box-sizing: border-box;
+  vertical-align: middle;
+  padding: 2% 0 0 0;
+}
+
+.next_1{
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 7% 0 0 0;
+  font-size: 2rem;
+  text-align: center;
 }
 
 /* --①運ぶものの選択-- */
-.first_choice{
-  padding: 10% 0 10% 0;
+.product{
+  background-color: #68C39F;
+  background-size: cover;
+  box-sizing: border-box;
+  min-height: 100vh;
 }
-/* .tumikomi{ */
-  /* display: flex;
-  justify-content: space-between;
-  padding: 0 1%; */
-/* } */
+
+.pro{
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 3% 0 0 0;
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.7; 
+  color: #fff;
+
+}
+
+.ec_item{
+  padding: 5% 0 3% 0;
+}
 
 .item_up{  
+  box-sizing: border-box;
   display: flex;
   margin: auto;
   justify-content: center;
-  flex-wrap:wrap;
+  font-size: 1.5rem;
 }
 
-/* .ec_item img{ */
-  /* border-radius: 20%; */
-/* } */
+.main_item{
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.5; 
+  color: #fff;
+}
+
+.label_in{
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1.5%;
+  border: none;
+}
 
 .ec_item img:hover{
   transform: scale(1.2,1.2);
@@ -87,12 +125,8 @@ header{
   background: url(../img/box_1.png);
 }
 
-/* .item:hover{
-  background: url(../img/box_1.png);
-} */
-
 .item{
-  width: 55%;
+  width: 90%;
 }
 
 .gokei{
@@ -100,12 +134,76 @@ header{
   width: auto;
   display: block;
   text-align: center;
-  justify-content:center ;
+  justify-content:center ;  
 }
+
+.go{
+  text-decoration: none;
+  box-sizing: border-box;
+  /* padding: 7% 0 0 0; */
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.7; 
+  color: #fff;
+}
+
+.form_label_in{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+}
+
+.kettei{
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+  padding: 2% 0 2% 0;
+}
+
+.button{
+  color: #fff;
+  font-weight: bold;
+  background:#41b331;
+  padding:0.5em 0.5em;
+  text-decoration:none;
+  font-size:1.3em;
+  display: block;
+  width: 20%;  
+  text-align: center;
+  margin: 0 auto;
+}
+
+.inline-block{
+  display:inline-block;
+}
+
+.kettei:hover{
+  opacity: 0.5;
+}
+
+
+
+
+
  
 
 
 /* --②truck の選択 -- */
+
+/* --所持金-- */
+.want_fix{
+  /* padding: 3% 0 0 0; */
+  width: 300px;
+  /* position: fixed; */
+  /* position: absolute; */
+  background-color: black;
+  color: #FFEEFF;
+  /* padding: auto; */
+  font-size: 1.5rem;
+}
+
 .defo_truck{
   display: block;
   text-align: center;  
@@ -138,29 +236,7 @@ header{
   /* border-radius: 50%; */
 }
 
-.button{
-  background:#FFCCFF;
-  padding:0.5em 0.5em;
-  /* border:black 2px solid; */
-  text-decoration:none;
-  font-size:1.3em;
-  display: block;
-  width: 30%;
-  text-align: center;
-  margin: 0 auto;
-}
-.inline-block{
-  display:inline-block;
-}
 
-.kettei{
-  display: block;
-  text-align: center;
-}
-
-.kettei:hover{
-  opacity: 0.5;
-}
 
 /* --②車格の選択-- */
 
