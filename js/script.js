@@ -127,17 +127,23 @@ $(function() {
      }          
    })
 
-   //トラックの後ろ姿が動く＋音がなる
-   $("#shipping").on("click",function(){
-    $("#plya_ship").get(0).play();
-
-   });
+   
 
      
       
       
 
   });  
+
+  //トラックの後ろ姿が動く＋音がなる
+  $('#shipping').on("click",function(){
+    // alert("OK");
+    $("#play_ship").get(0).play(); 
+    $("#back_truck").addClass('yure');   
+
+   })
+
+   
 
    
 
