@@ -6,7 +6,7 @@
 body{
   /* background-image: url(../img/yuso.jpg); */
   background-size: cover;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .text_center{
@@ -35,11 +35,11 @@ body{
 .first_choice{
   padding: 10% 0 10% 0;
 }
-.tumikomi{
+/* .tumikomi{ */
   /* display: flex;
   justify-content: space-between;
   padding: 0 1%; */
-}
+/* } */
 
 .item_up{  
   display: flex;
@@ -48,9 +48,9 @@ body{
   flex-wrap:wrap;
 }
 
-.ec_item img{
+/* .ec_item img{ */
   /* border-radius: 20%; */
-}
+/* } */
 
 .ec_item img:hover{
   transform: scale(1.2,1.2);

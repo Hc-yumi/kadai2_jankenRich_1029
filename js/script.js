@@ -91,16 +91,23 @@ $(function() {
       localStorage.saveKey = 'value2';
 
       //車格判定をする 
+      let kei=10000;
+      let niton=20000;
+      let yonton=30000;
+      let jyutton =50000; 
 
    console.log(total);
    
 
    $("#kei").on("click",function(){
+    alert("OK");
      if( total > 0 && total <= 1000 ){
        alert("OK");
      } else {
        alert("NG");
-     }          
+     }  
+     
+    //  $("#now_money").html('100000-kei');
    })
  
    $("#niton").on("click",function(){
@@ -139,7 +146,8 @@ $(function() {
   $('#shipping').on("click",function(){
     // alert("OK");
     $("#play_ship").get(0).play(); 
-    $("#back_truck").addClass('yure');   
+    $("#back_truck").addClass('yure');
+      
 
    })
 
