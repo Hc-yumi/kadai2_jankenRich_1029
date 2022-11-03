@@ -107,13 +107,13 @@ $("#kei").on("click",function(){
   //  action(1000)
 
    if( total > 0 && total <= 1000 ){
-     alert("OK");
+    //  alert("OK");
     //  action(true)
      $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
    } else {
     // action(false)
-     alert("NG");
+    //  alert("NG");
      $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
      
@@ -125,14 +125,14 @@ $("#kei").on("click",function(){
  $("#niton").on("click",function(){
   $("#now_money").html('¥80,000');
    if( total <= 2000 ){
-     alert("OK");
+    //  alert("OK");
     // action(true)
      $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
 
    } else {
     // action(false)
-     alert("NG");
+    //  alert("NG");
      $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
    }          
@@ -159,13 +159,13 @@ $("#kei").on("click",function(){
   $("#now_money").html('¥50,000');
 
    if( total <= 10000 ){
-     alert("OK");
+    //  alert("OK");
     // action(true)
      $("#result").hide(2000).fadeIn(5000).html('正しい選定をありがとう！ボーナス¥100,000').addClass('style');;
      $("#result_money").hide().fadeIn(20000).html('+ ¥100,000');
    } else {
     // action(false)
-     alert("NG");
+    //  alert("NG");
      $("#result").hide(2000).fadeIn(5000).html('積載オーバーだよ・・。ペナルティマイナス¥100,000・・まだまだだね。').addClass('style');
      $("#result_money").hide().fadeIn(20000).html('- ¥100,000');
    }          
@@ -187,26 +187,20 @@ $("#kei").on("click",function(){
     $("#last").addClass('result_text'); 
    })
 
-  //  $('#niton').on("click",function(){
-  //   alert("ラスト用");
-  //   $("#play_ship").get(0).play(); 
-  //   $("#back_truck").addClass('yure')
-  //   $("#last").addClass('result_text'); 
-  //  })
+   
+   //スクロールしても金額固定
+    const want_fix = document.querySelector(".want_fix");
+    const money = document.querySelector(".money");
+    window.addEventListener("scroll",() => {
+    window.addEventListener("scroll",() =>{
+        if(window.pageYOffset >= money.offsetTop){
+          want_fix.classList.add("sticky");
+        }else{
+          want_fix.classList.remove("sticky");
+        }
+      })
+    });
 
-  //  $('#yonton').on("click",function(){
-  //   alert("ラスト用");
-  //   $("#play_ship").get(0).play(); 
-  //   $("#back_truck").addClass('yure')
-  //   $("#last").addClass('result_text'); 
-  //  })
-
-  //  $('#jyutton').on("click",function(){
-  //   alert("ラスト用");
-  //   $("#play_ship").get(0).play(); 
-  //   $("#back_truck").addClass('yure')
-  //   $("#last").addClass('result_text'); 
-  //  })
    
     // switch 
     // case kei

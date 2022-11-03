@@ -41,7 +41,7 @@ header{
 .ex_first{
   text-decoration: none;
   box-sizing: border-box;
-  padding: 5% 0 0 0;
+  padding: 4% 0 0 0;
   font-size: 2rem;
   text-align: center;
   vertical-align: middle;
@@ -67,7 +67,7 @@ header{
 .next_1{
   box-sizing: border-box;
   text-decoration: none;
-  padding: 5% 0 2% 0;
+  padding: 2% 0 1% 0;
   font-size: 2rem;
   text-align: center;
 }
@@ -97,7 +97,7 @@ header{
 .pro{
   text-decoration: none;
   box-sizing: border-box;
-  padding: 3% 0 0 0;
+  padding: 6% 0 0 0;
   font-size: 2rem;
   text-align: center;
   vertical-align: middle;
@@ -130,6 +130,7 @@ header{
   text-align: center;
   padding: 1.5%;
   border: none;
+  cursor: pointer;
 }
 
 .ec_item img:hover{
@@ -173,7 +174,7 @@ header{
   box-sizing: border-box;
   display: block;
   text-align: center;
-  padding: 2% 0 2% 0;
+  padding: 1% 0 1% 0;
 }
 
 .button{
@@ -199,13 +200,9 @@ header{
 
 /* --所持金-- */
 .want_fix{
-  /* padding: 3% 0 0 0; */
   max-width: 100%;
-  /* position: fixed; */
-  /* position: absolute; */
   background-color: black;
   color: #FFEEFF;
-  /* padding: auto; */
   font-size: 1.5rem;
   text-align: center;
   justify-content: center;
@@ -217,6 +214,17 @@ header{
   background-size: cover;
   min-height: 100vh;
   width: 100%;
+}
+
+.ex_next{
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 4% 0 0 0;
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.7; 
+  font-weight: bold;
 }
 
 .truck{
@@ -276,6 +284,15 @@ header{
 }
 
 /* 判定 */
+.want_fix.sticky{
+  position: fixed;
+  left: 0;
+  top:  0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
 .last_background{
   box-sizing: border-box;
   background-image: url(../img/load.jpg);
