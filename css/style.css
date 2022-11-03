@@ -25,6 +25,7 @@ header{
   line-height: 1.5; 
   color: #fff;
 }
+
 .chall{
   padding: 5% 0 0 0;
 }
@@ -36,6 +37,7 @@ header{
 /* --所持金-- */
 .money{
   /* padding: 3% 0 0 0; */
+  width: 300px;
   position: fixed;
   position: absolute;
   background-color: black;
@@ -44,13 +46,17 @@ header{
   font-size: 1.5rem;
 }
 
+.ex_first{
+  padding: 7% 0 7% 0;
+  line-height: 1.5; 
+}
+
 
 .default_truck img{
-  width: 30%;
+  width: 60%;
   margin: auto;
   display: flex;
   padding: 0 0 10% 0;  
-
 }
 
 /* --①運ぶものの選択-- */
