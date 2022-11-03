@@ -4,9 +4,29 @@
 /* 4. 荷物の種類を選ぶと、トラックへ消えていくスタイル */
 
 body{
-  /* background-image: url(../img/yuso.jpg); */
+  /* position: absolute; */
+  background-image: url(../img/cover.jpg);
   background-size: cover;
-  /* background-color: pink; */
+
+}
+
+header{ 
+  background-color: #F5E653;
+  min-height: 100vh;
+}
+
+.first_text{
+  text-decoration: none;
+  padding: 20% 0 0 0;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.5; 
+  color: #fff;
+}
+.chall{
+  padding: 5% 0 0 0;
 }
 
 .text_center{
@@ -15,10 +35,12 @@ body{
 
 /* --所持金-- */
 .money{
+  /* padding: 3% 0 0 0; */
   position: fixed;
+  position: absolute;
   background-color: black;
   color: #FFEEFF;
-  padding: auto;
+  /* padding: auto; */
   font-size: 1.5rem;
 }
 
@@ -93,7 +115,7 @@ body{
 }
 
 .truck_choice img{
-  border-radius: 40%;
+  /* border-radius: 40%; */
   box-shadow: 10px 10px 15px -10px;
   text-align: center;
 }
@@ -186,4 +208,26 @@ body{
     transform: translateY(0); } 
 
 }
+
+.last_background{
+  /* background-image: url(../img/load.jpg); */
+  background-size: cover;
+  min-height: 100vh;
+
+}
+
+.last_background img{
+  text-decoration: none;
+  padding: 20% 0 0 0;
+  /* font-weight: bold; */
+  /* font-size: 2rem; */
+  /* text-align: center; */
+  /* vertical-align: middle; */
+}
+
+/* .last{
+  background-image: url(../img/souko.png);
+  background-size: cover;
+  min-height: 100vh;
+} */
 

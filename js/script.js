@@ -98,7 +98,7 @@ $(function() {
       let jyutton =50000; 
 
     
-   console.log(total);  
+  //  console.log(total);  
   let value = null;
 
   //軽¥10,000を所持金から引いた金額を表示する
@@ -183,7 +183,8 @@ $(function() {
   $('#shipping').on("click",function(){
     // alert("OK");
     $("#play_ship").get(0).play(); 
-    $("#back_truck").addClass('yure');    
+    $("#back_truck").addClass('yure')
+    $("#last").addClass('result_text');    
 
    })
 
