@@ -24,9 +24,15 @@
       <th>初期所持金</th>
       <th>¥100,000</th>
     </tr>
+
     <tr>
       <td>残金</td>
       <td id="now_money">¥100,000</td>
+    </tr>
+
+    <tr>
+      <td>ボーナス</td>
+      <td id="result_money">¥0</td>
     </tr>
   </table>
 
@@ -159,7 +165,7 @@
             <img src="img/kaden.png" alt="家電" class="item">
 
             <div class="form-box">
-              <p class="baggage_item" data-weight="10">
+              <p class="baggage_item" data-weight="30">
                 <span class="weight">【重量 30kg／台】</span>
               </p>
               <select name="家電数量">
@@ -186,6 +192,7 @@
   <div class="kettei">
     <p>輸送する商品は決まったかな。</p>
     <a class="inline-block button" href="#syakaku" id="decision">決定</a>
+    <audio src="/sound/result_push.mp3" id="play_kettei"></audio>
   </div>
 
  
@@ -240,9 +247,7 @@
 
   <!-- resultとしてここに結果を示す -->
   <div class="text_center last">
-    <p>運べるかな？</p>
-    <p id="result"></p>
-    <p>金額表示</p>
+    <p id="result">運べるかな？</p>
   </div>
 
 
